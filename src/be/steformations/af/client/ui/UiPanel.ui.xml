@@ -37,14 +37,16 @@
 	    </m:MaterialColumn>
 	    
 	      <m:MaterialColumn grid="s2" >
-	      <af:ResetButton text="Effacer"/>
+	      <af:ResetButton text="Réinitialiser"/>
 	    </m:MaterialColumn>
 	    
 		</m:MaterialRow>
 		
 		<m:MaterialRow> <!-- outputs-->
+		<m:MaterialColumn><af:Output/></m:MaterialColumn>
 		
 		</m:MaterialRow>
 	</m:MaterialColumn>
+	
 </m:MaterialRow>
 </ui:UiBinder> 

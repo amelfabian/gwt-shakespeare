@@ -3,9 +3,12 @@ package be.steformations.af.client.ui.widget;
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.uibinder.client.UiConstructor;
 
+import be.steformations.af.client.event.EventManager;
+import be.steformations.af.client.event.reset.ResetEvent;
+import be.steformations.af.client.event.reset.ResetEventManager;
 import gwt.material.design.client.ui.MaterialListBox;
 
-public class PlayInput extends MaterialListBox{
+public class PlayInput extends MaterialListBox implements ResetEventManager{
 	
 	@UiConstructor
 	public PlayInput(String placeholder) {
@@ -22,6 +25,15 @@ public class PlayInput extends MaterialListBox{
 			this.addItem("tempest","The tempest");
 			
 			this.setSelectedIndex(0);
+			
+			EventManager.getInstance().addHandler(ResetEvent.type, this);
+			
 		
+	}
+
+	@Override
+	public void onReset(ResetEvent event) {
+			GWT.log("PlayInput.onReset()");
+			this.setSelectedIndex(0);
 	}
 }

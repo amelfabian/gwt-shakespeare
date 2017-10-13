@@ -9,6 +9,8 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
+import be.steformations.af.client.event.EventManager;
+import be.steformations.af.client.search.SearchEvent;
 import be.steformations.af.client.ui.widget.PlayInput;
 import be.steformations.af.client.ui.widget.SearchButton;
 import be.steformations.af.client.ui.widget.SpeakerInput;
@@ -33,7 +35,9 @@ public class UiPanel extends Composite implements ClickHandler{
 
 	@Override
 	public void onClick(ClickEvent event) {
-			Window.alert("search ");
+		GWT.log("UiPanel.onClick()");
+		SearchEvent searchEvent = new SearchEvent();
+		EventManager.getInstance().fireEvent(searchEvent);
 	}
 
 }
