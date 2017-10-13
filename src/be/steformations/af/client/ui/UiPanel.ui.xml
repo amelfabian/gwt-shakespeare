@@ -17,15 +17,15 @@
 		<m:MaterialRow> <!-- inputs-->
 		
 	    <m:MaterialColumn grid="s4">
-	    	<af:PlayInput placeholder="Pièce"/>
+	    	<af:PlayInput placeholder="Pièce" ui:field="playInput"/>
 	    </m:MaterialColumn>
 	    
 	     <m:MaterialColumn grid="s4">
-	     	<af:SpeakerInput label="Personnage"/>
+	     	<af:SpeakerInput label="Personnage" ui:field="speakerInput"/>
 	    </m:MaterialColumn>
 	    
 	     <m:MaterialColumn grid="s4">
-	     	<af:StartInput label="Début"/>
+	     	<af:StartInput label="Début" ui:field="startInput"/>
 	    </m:MaterialColumn>
 	    
 		</m:MaterialRow>	
@@ -33,7 +33,7 @@
 		<m:MaterialRow> <!-- buttons-->
 		
 		  <m:MaterialColumn grid="s2" offset="s4">
-		  <af:SearchButton text="Chercher"/>
+		  <af:SearchButton text="Chercher" ui:field="searchButton"/>
 	    </m:MaterialColumn>
 	    
 	      <m:MaterialColumn grid="s2" >

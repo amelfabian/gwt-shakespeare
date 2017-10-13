@@ -1,6 +1,7 @@
 package be.steformations.af.client.ui.widget;
 
 import com.google.gwt.core.shared.GWT;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiConstructor;
 
 import gwt.material.design.client.ui.*;
