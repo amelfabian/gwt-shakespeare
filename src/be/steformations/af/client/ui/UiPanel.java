@@ -33,7 +33,7 @@ public class UiPanel extends Composite implements ClickHandler{
 
 	@Override
 	public void onClick(ClickEvent event) {
-			Window.alert("Search");
+			Window.alert("search ");
 	}
 
 }

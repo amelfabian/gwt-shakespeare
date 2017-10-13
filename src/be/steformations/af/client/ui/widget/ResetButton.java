@@ -6,6 +6,8 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.Window;
 
+import be.steformations.af.client.event.EventManager;
+import be.steformations.af.client.event.reset.ResetEvent;
 import gwt.material.design.client.ui.MaterialButton;
 
 public class ResetButton extends MaterialButton implements ClickHandler {
@@ -19,7 +21,9 @@ public class ResetButton extends MaterialButton implements ClickHandler {
 
 		@Override
 		public void onClick(ClickEvent event) {
-				Window.alert("reset");
+			GWT.log("ResetButton.onClick()");
+			ResetEvent resetEvent = new ResetEvent();
+			EventManager.getInstance().fireEvent(resetEvent);
 			
 		}
 }
