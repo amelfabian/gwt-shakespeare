@@ -32,9 +32,14 @@ public class ShakespeareService extends HttpServlet {
 		System.out.println("ShakespeareService.doPost()");
 		
 		SearchParams params = this.mapper.readerFor(SearchParams.class).readValue(req.getInputStream());
-		String monologue = this.searcher.getMonologue(params.getPlay(), params.getSpeaker(), params.getStart());
-		System.out.println("ShakespeareService.doPost() => " + monologue);
+		System.out.println(params);
+		String monologue = this.searcher.getMonologue(params.getPlay().toLowerCase(), params.getSpeaker(), params.getStart());
+		System.out.println(monologue);
 		resp.setContentType("text/plain");
+		if(monologue != null){
 		resp.getWriter().write(monologue);
+		}else{
+			resp.getWriter().write("pas de monologue correspondant");
+		}
 	}
 }
