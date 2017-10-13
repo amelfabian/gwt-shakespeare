@@ -4,6 +4,7 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
+import be.steformations.af.client.http.Searcher;
 import be.steformations.af.client.ui.UiPanel;
 
 public class ShakespeareEntryPoint implements EntryPoint {
@@ -14,6 +15,8 @@ public class ShakespeareEntryPoint implements EntryPoint {
 		
 		UiPanel panel = new UiPanel();
 		RootLayoutPanel.get().add(panel);
+		
+		new Searcher();
 	}
 
 }

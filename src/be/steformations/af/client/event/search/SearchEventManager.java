@@ -1,4 +1,4 @@
-package be.steformations.af.client.search;
+package be.steformations.af.client.event.search;
 
 import com.google.gwt.event.shared.EventHandler;
 
